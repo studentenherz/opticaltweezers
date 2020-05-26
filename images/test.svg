@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200" height="200"
+     viewBox="0 0 1000 1000 "
+     version="1.1">
+  <title>Title here</title>
+
+  <style type="text/css" media="screen">
+    <![CDATA[
+    .test-rect:hover {
+      opacity: 0.4;
+    }
+    ]]>
+  </style>
+
+  <rect class="test-rect" x="500" y="500" width="200" height="100" fill="#CC0F16" />
+  
+</svg>

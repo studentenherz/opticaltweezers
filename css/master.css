@@ -1,0 +1,35 @@
+*{
+  --color-1: #327cbdd3;
+}
+
+body{
+  margin: 0;
+  font-size: 14px;
+  background-color: whitesmoke;
+}
+
+#player{
+  height: 55vh;
+  width: 40vw;
+  position: absolute;
+  left: 1.5vw;
+  bottom: 20vh;
+}
+
+#presentation{
+  height: 70vh;
+  width: 55vw;
+  position: absolute;
+  right: 1.5vw;
+  bottom: 15vh;
+}
+
+#footer{
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  height: 7vh;
+  width: 100%;
+  background-color: var(--color-1);
+}
+
