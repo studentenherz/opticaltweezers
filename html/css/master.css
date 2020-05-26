@@ -113,7 +113,7 @@ main{
   font-size: xx-large;
   opacity: 0;
   transform: translateX(-500px);
-  transition: all 0.3s 0.1s;
+  transition: all 0.2s 0.1s;
 }
 
 .slide .title.show{

@@ -21,7 +21,10 @@ const setActiveSlide = (x) => {
   slides.forEach((slide, i) => {
     if(i == index){
       toggleShow(i, '.title');
-      slide.scrollIntoView({behavior: "smooth"});
+      if(window.chrome != undefined)
+        slide.scrollIntoView();
+      else
+        slide.scrollIntoView({ behavior: 'smooth'});
     }
   });
   
@@ -73,11 +76,11 @@ window.addEventListener('wheel', (e) => {
     return;
   }
 
-  if(delta > 1){
+  if(delta > 0){
     const clickEvent = new Event('click');
     nextBtn.dispatchEvent(clickEvent);
   }
-  else if(delta < -1){
+  else if(delta < 0){
     const clickEvent = new Event('click');
     prevBtn.dispatchEvent(clickEvent);
   }
