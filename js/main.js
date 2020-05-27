@@ -1,4 +1,5 @@
 var tag = document.createElement('script');
+const presentation = document.getElementById('presentation');
 
 tag.src = "http://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -12,6 +13,8 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange
     }
   });
+
+  setInterval(scrollIntoViewWithVideo, 500);
 }
 
 var done = false;
@@ -24,4 +27,16 @@ function onPlayerStateChange(event) {
 
 function stopVideo() {
   player.stopVideo();
+}
+
+const timeMarks = {
+  312 : 1
+}
+
+function scrollIntoViewWithVideo () {
+  var currTime = parseInt(player.getCurrentTime());
+  // console.log(currTime);
+  if(timeMarks[currTime]){
+    presentation.contentWindow.setActiveSlide(timeMarks[currTime]);
+  }
 }
