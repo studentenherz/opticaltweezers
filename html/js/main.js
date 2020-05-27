@@ -16,7 +16,7 @@ slides.forEach((slide, i) => {
   slidesNav.appendChild(node);
 });
 
-const setActiveSlide = (x) => {
+window.setActiveSlide = function(x){
   index = x;
   slides.forEach((slide, i) => {
     if(i == index){
