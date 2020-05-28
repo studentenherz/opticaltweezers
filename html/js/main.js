@@ -34,6 +34,10 @@ window.setActiveSlide = function(x){
   });
 }
 
+window.getDescription = function(){
+  return slides[index].querySelector('.description').innerHTML;
+}
+
 slidesNav.querySelectorAll('span').forEach((dot, i) => {
   dot.addEventListener('click', () => {setActiveSlide(i)});
 });

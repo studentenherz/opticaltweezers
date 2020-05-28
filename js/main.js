@@ -1,5 +1,6 @@
 var tag = document.createElement('script');
 const presentation = document.getElementById('presentation');
+var description = document.querySelector('#description');
 
 tag.src = "http://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -8,7 +9,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    videoId: '2wPmHlop_Ik'
+    videoId: '2wPmHlop_Ik',
+    playerVars: { 'rel':0}
   });
 
   setInterval(scrollIntoViewWithVideo, 500);
@@ -25,3 +27,9 @@ function scrollIntoViewWithVideo () {
     presentation.contentWindow.setActiveSlide(timeMarks[currTime]);
   }
 }
+
+function setDescription() {
+  description.innerHTML = presentation.contentWindow.getDescription();
+}
+
+setInterval(setDescription, 500);
