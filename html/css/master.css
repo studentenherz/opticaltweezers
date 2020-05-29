@@ -4,6 +4,8 @@
 
 svg > g:last-child > g:last-child { pointer-events: none }
 
+/* Presentation */
+
 body{
   margin: 0;
   font-size: 14px;
@@ -133,6 +135,8 @@ main{
   display: none;
 }
 
+/* Google charts */
+
 div.google-visualization-tooltip {
   background-color: #000000b0;
   color: #f5f5f5;
@@ -145,5 +149,13 @@ div.google-visualization-tooltip {
 div.google-visualization-tooltip p{
   margin: 5px;
   text-align: left;
+}
+
+/* interactive SVG */
+
+#tweezer-svg{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
