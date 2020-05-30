@@ -37,10 +37,13 @@
     <div class="slide" >
       <div class="short-title">draggable</div>
       <div class="title">draggable?</div>
+      <div class="description">Muéveme</div>
 
-      <svg id="tweezer-svg" width=80% xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20">
-        <rect x="0" y="0" width="30" height="20" fill="#f5f5f5" />
-        <circle cx="10" cy="10" r="5" fill="#0000ff55" stroke-width="3"/>
+      <svg id="tweezer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" onload="makeDraggable(evt)">
+
+          <circle id="circle" class="draggable" cx="50" cy="50" r="10" fill="#2fcaff55" stroke-width="0"/>
+
+        
       </svg>
 
 
@@ -97,4 +100,5 @@
 
 </body>
 <script src="js/main.js"></script>
+<script src="js/svg.js"></script>
 </html>

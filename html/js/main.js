@@ -35,7 +35,9 @@ window.setActiveSlide = function(x){
 }
 
 window.getDescription = function(){
-  return slides[index].querySelector('.description').innerHTML;
+  if(slides[index].querySelector('.description'))
+    return slides[index].querySelector('.description').innerHTML;
+  return null;
 }
 
 slidesNav.querySelectorAll('span').forEach((dot, i) => {
