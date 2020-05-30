@@ -27,6 +27,7 @@ main{
   position: fixed;
   bottom: 5px;
   left: 50vw;
+  transform: translateX(-50%);
 }
 
 .nav button{
@@ -154,8 +155,9 @@ div.google-visualization-tooltip p{
 /* interactive SVG */
 
 #tweezer-svg{
-  height: 80vh;
-  width: 80vw;
+  --side: 80vh;
+  height: var(--side);
+  width: var(--side);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
