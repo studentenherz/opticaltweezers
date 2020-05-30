@@ -2,7 +2,11 @@ function makeDraggable(evt){
   var svg =  evt.target;
   var selectedElement = false;
   var offset = [null, null, null];
+  var refInt1 = svg.querySelector('#refInt1');
+  var refInt2 = svg.querySelector('#refInt2');
+
   const particleRadius = 10;
+  const particleN = 3;
   const l1 = {
     x1: 40,
     x2: 60,
@@ -14,6 +18,16 @@ function makeDraggable(evt){
     x2: 40,
     y1: 0,
     y2: 100
+  };
+
+  i1 = {
+    x: l1.x2 - l1.x1,
+    y: l1.y2 - l1.y1
+  };
+
+  i2 = {
+    x: l2.x2 - l2.x1,
+    y: l2.y2 - l2.y1
   };
 
   svg.querySelector('#l1').setAttributeNS(null, 'x1', l1.x1);
@@ -49,8 +63,25 @@ function makeDraggable(evt){
       selectedElement.setAttributeNS(null, "cx", r.x - offset.x);
       selectedElement.setAttributeNS(null, "cy", r.y - offset.y);
 
+      var cx = parseFloat(selectedElement.getAttributeNS(null, "cx"));
+      var cy = parseFloat(selectedElement.getAttributeNS(null, "cy"));
+      var inter = intersectionLineCircle(cx, cy, particleRadius, l1.x1, l1.y1, l1.x2, l1.y2);
 
-      console.log(intersectionLineCircle(parseFloat(selectedElement.getAttributeNS(null, "cx")), parseFloat(selectedElement.getAttributeNS(null, "cy")), particleRadius, l1.x1, l1.y1, l1.x2, l1.y2));
+      if(!inter) return;
+
+      var n1 = {
+        x: -cx + inter[1].x,
+        y: -cy + inter[1].y
+      }
+
+      var refDir = refractionCircle(1, particleN, n1, i1);
+
+      refInt1.setAttributeNS(null, 'x1', inter[1].x);
+      refInt1.setAttributeNS(null, 'y1', inter[1].y);
+      refInt1.setAttributeNS(null, 'x2', inter[1].x - 20 * refDir.x);
+      refInt1.setAttributeNS(null, 'y2', inter[1].y - 20 * refDir.y);
+
+      // console.log();
     }
   }
 
@@ -96,6 +127,28 @@ function makeDraggable(evt){
     return null;
   }
 
+  function dot(a, b){
+    return a.x * b.x + a.y*b.y;
+  }
 
+  function unitaryVector(v){
+    var norm = Math.sqrt(dot(v, v));
+    return {
+      x: v.x / norm,
+      y: v.y / norm
+    };
+  }
+
+  function refractionCircle(n1, n2, n, i){
+    var mu = n1/n2;
+    n = unitaryVector(n);
+    i = unitaryVector(i);
+    ni = dot(n,i);
+    var a1 = Math.sqrt(1 - mu*mu*(1 - ni*ni))
+    return {
+      x: a1 * n.x + mu * i.x - mu * ni * n.x,
+      y: a1 * n.y + mu * i.y - mu * ni * n.y,
+    }
+  }
 
 }
