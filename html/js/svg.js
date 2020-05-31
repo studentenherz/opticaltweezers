@@ -165,7 +165,7 @@ function makeDraggable(evt){
   document.addEventListener('keyup', keyUpHandler);
 
   function keyDownHandler(evt){
-    evt.preventDefault();
+    // evt.preventDefault();
     // console.log(evt.code);
     if(evt.code == 'Space') fixToAxis = true;
     else if(evt.code == 'ArrowLeft' || evt.code == 'ArrowUp'){
@@ -179,7 +179,7 @@ function makeDraggable(evt){
   }
 
   function keyUpHandler(evt){
-    evt.preventDefault();
+    // evt.preventDefault();
     fixToAxis = false;
   }
 
