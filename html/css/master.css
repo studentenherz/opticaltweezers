@@ -16,6 +16,7 @@ body{
 .slide{
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 main{
@@ -24,6 +25,7 @@ main{
 }
 
 .nav{
+  z-index: 1000;
   position: fixed;
   bottom: 5px;
   left: 50vw;
@@ -111,7 +113,7 @@ main{
 }
 
 .slide .title{
-  padding: 5px;
+  padding: 20px 20px 10px 20px;
   text-align: center;
   font-size: xx-large;
   opacity: 0;
@@ -133,6 +135,7 @@ main{
 
 .slide#cover .title{
   font-size: 5em;
+  border: none;
 }
 
 .slide#cover .subtitle{
@@ -285,8 +288,8 @@ div.google-visualization-tooltip p{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 2px 2px 6px 0 #8b8b8b
+  transform: translate(-50%, -50%) scale(1.4);
+  box-shadow: 2px 2px 6px 0 #8b8b8b;
 }
 
 #muestra-container span{
@@ -302,4 +305,8 @@ div.google-visualization-tooltip p{
 
 #setup #setup-muestra:hover{
   cursor: pointer;
+}
+
+img:hover{
+  z-index: 100;
 }

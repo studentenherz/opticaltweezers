@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0">
   <link rel="stylesheet" href="css/Serif/cmun-serif.css">
-    <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/master.css">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="js/charts.js"></script>
   <title>Document</title>
@@ -13,34 +13,33 @@
   <main>
 
     <!-- Slides  -->
-
+    
+    <!-- Cover -->
     <div class="slide" id="cover">
       <div class="short-title">Pinzas Ópticas </div>
       <div class="title-container">
         <div class="title"> Pinzas Ópticas </div>
         <div class ="subtitle"> Construcción de pinzas ópticas y estudio del movimiento browniano. </div>
       </div>
-
+      
       <div class="description">A ver si esto funciona, esto es lo que estaría diciendo aquí</div>
     </div>
-    
+        
+    <!-- Pinzas ópticas -->
     <div class="slide" >
-      <div class="title">Trayectorias</div>
-      <div class="description">Aquí ven las trayectoriasí</div>
-      <div class="short-title">Trayectorias</div>
-      <div id="chart1" style="width: 420px; height: 420px;"></div>
+      <div class="short-title">Pinza ópticas</div>
+      <div class="title">Pinzas ópticas</div>
+
+      <img src="images/Ashkin1.png" alt="ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 60%; transform: translateX(-50%); top: 120px;">
+
+      <img src="images/Ashkin2.png" alt="ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 40%; transform: translateX(-50%); top: 240px;">
+
     </div>
 
-    <div class="slide" id="msd">
-      <div class="title">Mean Squared Distance</div>
-      <div class="short-title">MSD</div>
-      <div id="chart2" style="width: 700px; height: 420px;"></div>
-    </div>
-
-
+    <!-- Funcionamiento -->
     <div class="slide" id="tweezer-slide">
-      <div class="short-title">draggable</div>
-      <div class="title">draggable?</div>
+      <div class="short-title">Cómo funcionan</div>
+      <div class="title">Funcionamiento de las pinzas ópticas</div>
       <div class="description">Muéveme</div>
 
       <svg id="tweezer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 105" onload="makeDraggable(evt)">
@@ -50,7 +49,6 @@
          </marker>
         </defs>
         <line id="focal-plane" class="draggable"/>
-        <!-- <path stroke-width="0" fill="#2fcaff55"/> -->
         <!-- Elements are added programmatically -->
       </svg>
 
@@ -61,11 +59,11 @@
 
 
     </div>
-
-
+    
+    <!-- Montaje -->
     <div class="slide" >
-      <div class="short-title">2</div>
-      <div class="title">2</div>
+      <div class="short-title">Montaje</div>
+      <div class="title">Montaje Experimental</div>
 
       <svg id="setup" width="91.101mm" height="69.321mm" version="1.1" viewBox="0 0 91.101 69.321" xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.iki.fi/pav/software/textext/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs id="defs2">
@@ -472,11 +470,11 @@
         <span onclick="closeMuestra()">&times;</span>
         <svg id="muestra" width="40.849mm" height="24.507mm" version="1.1" viewBox="0 0 40.849 24.507" xmlns="http://www.w3.org/2000/svg">
         <g id="layer1" transform="translate(-109.81 -131.24)">
-         <path id="cubreobjeto" d="m114.69 152.27 8.529-8.577 11.651 3.1394s-8.529 8.577-8.529 8.577z" fill="#dcfcfe" fill-opacity=".50196"/>
+         <path id="cubreobjeto" d="m114.69 152.27 8.529-8.577 11.651 3.1394s-8.529 8.577-8.529 8.577z" fill="#2fcaff55" fill-opacity=".50196"/>
          <path id="parafilm" d="m112.8 148.48 18.191 4.9018 8.4468-8.4944-18.191-4.9018z" fill="#ededed" fill-opacity=".50196" stroke="#636868" stroke-opacity=".87843" stroke-width=".019406"/>
          <ellipse id="path1776" cx="125.05" cy="146.49" rx="1.7514" ry="1.0885" fill="#fff" stroke="#000" stroke-linecap="round" stroke-opacity=".50196" stroke-width=".078483"/>
          <path id="gota" d="m125.61 146.45c-0.0217 0.17576-0.36903 0.2604-0.55718 0.34628-0.29599-3e-3 -0.37221-0.19223-0.55716-0.34628-3e-3 -0.19733 0.12821-0.34923 0.54884-0.42157 0.22284-0.15994 0.41061 0.28532 0.5655 0.42157z" fill="#b5e1ee"/>
-         <path id="portaobjeto" d="m141.22 148.51 8.529-8.577-30.502-8.2189-8.529 8.577z" fill="#dbfbfc" fill-opacity=".75294" opacity=".57049" stroke="#d1ffff" stroke-width=".25673px"/>
+         <path id="portaobjeto" d="m141.22 148.51 8.529-8.577-30.502-8.2189-8.529 8.577z" fill="#2fcaff55" fill-opacity=".75294" opacity=".57049" stroke="#d1ffff" stroke-width=".25673px"/>
         </g>
     </svg></div>
        
@@ -484,34 +482,31 @@
 
     </div>
 
-
+    <!-- Movimiento Browniano -->
     <div class="slide" >
-      <div class="short-title">3</div>
-      <div class="title">3</div>
+      <div class="short-title">Movimiento Browniano</div>
+      <div class="title">Estudio del movimiento browniano</div>
     </div>
 
-
+    <!-- Trayectorias -->
     <div class="slide" >
-      <div class="short-title">4</div>
-      <div class="title">4</div>
+      <div class="title">Análisis de las trayectorias</div>
+      <div class="description">Aquí ven las trayectoriasí</div>
+      <div class="short-title">Trayectorias</div>
+      <div id="chart1" style="width: 420px; height: 420px;"></div>
     </div>
 
-
-    <div class="slide" >
-      <div class="short-title">5</div>
-      <div class="title">5</div>
+    <!-- MSD -->
+    <div class="slide" id="msd">
+      <div class="title">Desplazamiento Cuadrático Medio (Mean Square Distance)</div>
+      <div class="short-title">MSD</div>
+      <div id="chart2" style="width: 700px; height: 420px;"></div>
     </div>
 
-
+    <!-- Utilizando las pinzas ópticas -->
     <div class="slide" >
-      <div class="short-title">6</div>
-      <div class="title">6</div>
-    </div>
-
-
-    <div class="slide" >
-      <div class="short-title">7</div>
-      <div class="title">7</div>
+      <div class="short-title">Pinzas ópticas</div>
+      <div class="title">Manipulación de partículas con pinza  óptica</div>
     </div>  
 
     <!-- Navigation  -->
