@@ -345,3 +345,12 @@ img:hover{
 #michaelPaper.show{
   transform: translateY(0);
 }
+
+#chart2{
+  width: 65vw; 
+  height: 70vh;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

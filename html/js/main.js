@@ -4,7 +4,7 @@ const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
 const slidesNav = document.querySelector('.slidesNav');
 
-let index = 4; // current slide index
+let index = 5; // current slide index
 
 slides.forEach((slide, i) => {
   var node = document.createElement('span');
