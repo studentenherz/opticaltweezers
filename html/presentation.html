@@ -28,7 +28,7 @@
       </div>
       
       <div class="description">
-        Este trabajo es 
+        Este trabajo forma parte de la asignatura Física Experimental II en el Instituto Balseiro, en Bariloche, Argentina.
       </div>
     </div>
         
@@ -38,6 +38,8 @@
       <div class="title">Pinzas ópticas</div>
 
       <div class="description">
+
+        En 1970 A. Ashkin publicó las primeras observaciones de aceleración en partículas libres debido a la mera presión de la radiación. En 1986, el propio Ashkin y compañía publicarion la observación de partículas dieléctricas atrapadas por hacez simples.
 
         <div class="reference">
             <a href="https://doi.org/10.1103/PhysRevLett.24.156">[1]</a> &nbsp; ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE <br>
@@ -60,7 +62,9 @@
     <div class="slide" id="tweezer-slide">
       <div class="short-title">Cómo funcionan</div>
       <div class="title">Funcionamiento de las pinzas ópticas</div>
-      <div class="description">Muéveme</div>
+      <div class="description">
+        Puedes mover la partícula y el plano focal para ver cómo interactúa con los rayos de luz. Mayor intensidad o un haz más concentrado implican mayor impulso sobre la partícula.  Notar que la zona de retorno pasado el plano focal es pequeña y la fuerza sobre la partícula es menor que la que tiende a expulsarla cuando está del otro lado. 
+      </div>
 
       <svg id="tweezer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 105" onload="makeDraggable(evt)">
         <defs>
@@ -94,6 +98,10 @@
     <div class="slide" >
       <div class="short-title">Montaje</div>
       <div class="title">Montaje Experimental</div>
+
+      <div class="description">
+        Se utilizó un laser de &lambda; = 633 nm y potencia de 17 mW. Los espejos guían el haz para que pase por los dispositivos necesarios. Primero se ensancha la sección transversal del haz con un sistema de lentes convergentes, esto para aprovechar toda la apertura del objetivo de microscopio. El haz pasa por un divisor de haz, que será necesario para obtener la imagen luego. La parte que se transmite llega es enfocada en la muestra por el objetivo de microscopio. El posicionador XYZ se encarga del foco y el movimiento de la muestra. Ena fuente de luz blanca provee la iluminación necesaria para formar la imagen. La luz hace el camino de vuelta y una parte es reflejada en al divisor de haz en dirección a la cámara. Antes de llegar a la cámara la luz pasa por un filtro para eliminar la luz del laser y evitar daños en la cámara.
+      </div>
 
       <svg id="setup" version="1.1" viewBox="0 0 91.101 69.321" xmlns="http://www.w3.org/2000/svg" xmlns:ns1="http://www.iki.fi/pav/software/textext/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs id="defs2">
@@ -517,6 +525,8 @@
       <div class="title">Estudio del movimiento browniano</div>
       <div class="description"> 
 
+        El movimiento browniano fue descubierto por Robert Brown en 1827 y explicado en 1905 por Albert Einstein utilizando la teoría cinética molecular. Describe parámetros de interés sobre el movimiento aleatorio de partículas coloidales en suspensión.
+
         <div class="reference">
           <a href="https://doi.org/10.1002/andp.19053220806">[3]</a> &nbsp; Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen 
         </div>
@@ -550,6 +560,7 @@
       <div class="short-title">Trayectorias</div>
 
       <div class="description"> 
+        EL movimiento de la partícula naranja es cualitativamente diferente al de las demás. Parece que estuviera confinada a una región más pequeña del espacio. El coeficiente de difusión da una medida de cuánto se puede mover una partícula. El desplazamiento cuadrático medio es proporcional al coeficiente de difusión y se calcula como la media del desplazamiento cuadrático entre todas las partículas en un intervalo de tiempo. Cuando se tiene una sola partícula se hace el análisis que se muestra en el trabajo de abajo.
 
         <div class="reference">
           <a href="https://dx.doi.org/10.1016%2FS0006-3495(97)78820-9">[4]</a> &nbsp; Single-particle tracking: the distribution of diffusion coefficients. 
@@ -598,6 +609,10 @@
       <div class="short-title">MSD</div>
       <div id="chart2" ></div>
     
+      <div class="description">
+        El coeficiente de difusión de la partícula naranja es menor que el de las otras dos como era de esperar. Esto puede deberse a que la partícula se encuentre bajo la interacción con otras partículas en otro plano. Los cálculos utilizando la ecuación de Einstein dan un orden de magnitud superior que haciendo el ajuste. Achacamos esta diferencia, sobre todo, a la inexactitud con que se trackearon las partículas. 
+      </div>
+
       <div style="width: 30vw; position: absolute; right: 60px; top: 50%; transform: translateY(-50%); font-size: large;">
         <div>
           <p>Resultados de la ecuación de Einstein</p>
@@ -624,6 +639,10 @@
       <div class="short-title">Atrapando partículas</div>
       <div class="title">Manipulación de partículas con pinza  óptica</div>
       
+      <div class="description">
+        En este caso se pudieron manipular tres partículas seguidas. Se puede notar como a veces con solo acercar el haz la partícula es atraída y queda atrapada.
+      </div>
+
       <video controls>
         <source src="video/tweezers-working.mp4" type="video/mp4">
         Lo siento, su navegador no soporta video.
@@ -635,6 +654,10 @@
       <div class="short-title">Partículas "pateadas"</div>
       <div class="title">Manipulación de partículas con pinza  óptica.</div>
       
+      <div class="description">
+        En estos casos las partículas son atraídas pero con la misma son expulsadas del plano focal. Una pequeña vibración en el posicionador XYZ afecta grandemente el resultado en estos casos. Sería recomendable instalar un sistema de control por motores de paso utilizando la técnica de micro-stepping, para asegurar una mejor precisión y menos vibraciones.
+      </div>
+
       <video controls>
         <source src="video/tweezers-fail.mp4" type="video/mp4">
         Lo siento, su navegador no soporta video.
