@@ -25,7 +25,7 @@ function addTooltip(id, i, setup, descriptions){
 
   elm.addEventListener('mouseover', function(evt){
     tooltip.innerHTML = descriptions[i];
-    tooltip.style.display = 'block';
+    tooltip.classList.add('show');
     showTooltip(evt);
   });
 
@@ -34,7 +34,7 @@ function addTooltip(id, i, setup, descriptions){
   });
   
   elm.addEventListener('mouseleave', function(evt){
-    tooltip.style.display = 'none';
+    tooltip.classList.remove('show');
   });
 }
 
@@ -53,14 +53,6 @@ var muestraContainer = document.querySelector('#muestra-container');
 
   elm.addEventListener('mousedown', function(evt){
     muestraContainer.style.display = 'block';
-  });
-
-  elm.addEventListener('mousemove', function(evt){
-    showTooltip(evt);
-  });
-  
-  elm.addEventListener('mouseleave', function(evt){
-    tooltip.style.display = 'none';
   });
 
 function closeMuestra(){

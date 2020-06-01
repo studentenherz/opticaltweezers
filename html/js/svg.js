@@ -189,6 +189,8 @@ function makeDraggable(evt){
       offset = getMousePosition(evt);
       offset.x -= selectedElement.getAttributeNS(null,(selectedElement == circ ? "cx" : "x1"));
       offset.y -= selectedElement.getAttributeNS(null, (selectedElement == circ ? "cy" : "y1"));
+
+      document.querySelector('#hint').classList.add('show');
     }
   }
   
@@ -234,6 +236,7 @@ function makeDraggable(evt){
   
   function endDrag(evt){
     selectedElement = null;
+    document.querySelector('#hint').classList.remove('show');
   }
 
   function paint(l , ray, refInt, ref){

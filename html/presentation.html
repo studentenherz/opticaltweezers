@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="css/master.css">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="js/charts.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
   <title>Document</title>
 </head>
 <body>
@@ -16,7 +21,7 @@
     
     <!-- Cover -->
     <div class="slide" id="cover">
-      <div class="short-title">Pinzas Ópticas </div>
+      <div class="short-title">Presentación</div>
       <div class="title-container">
         <div class="title"> Pinzas Ópticas </div>
         <div class ="subtitle"> Construcción de pinzas ópticas y estudio del movimiento browniano. </div>
@@ -30,9 +35,26 @@
       <div class="short-title">Pinza ópticas</div>
       <div class="title">Pinzas ópticas</div>
 
-      <img src="images/Ashkin1.png" alt="ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 60%; transform: translateX(-50%); top: 120px;">
+      <div class="description">
+        <p>
+          <a href="https://doi.org/10.1103/PhysRevLett.24.156">[1]</a> &nbsp; ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE
 
-      <img src="images/Ashkin2.png" alt="ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 40%; transform: translateX(-50%); top: 240px;">
+        </p>
+
+        <p>
+          <a href="https://doi.org/10.1364/OL.11.000288">[2]</a> &nbsp; Observation of a single-beam gradient force optical trap for dielectric particles
+        </p>
+        
+        
+      </div>
+
+
+      <img src="images/Ashkin1.png" alt="ACCELERATION AND TRAPPING OF PARTICLES BY RADIATION PRESSURE" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 60%; transform: translateX(-50%); top: 120px;">
+      <!-- https://doi.org/10.1103/PhysRevLett.24.156 -->
+
+      <img src="images/Ashkin2.png" alt="Observation of a single-beam gradient force optical trap for dielectric particles" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 40%; transform: translateX(-50%); top: 240px;">
+      <!-- https://doi.org/10.1364/OL.11.000288 -->
+
 
     </div>
 
@@ -52,9 +74,13 @@
         <!-- Elements are added programmatically -->
       </svg>
 
+      <div id="hint" class="tooltip">Aprieta espacio para fijar al eje</div>
+
       <div id="controllers">
-        <input type="range" min="5" max="20" value="10" class="slider" id="radiusSlider">
-        <input type="range" min="10" max="100" value="50" class="slider" id="intensitySlider">
+        <label for="rad">Radio</label><br>
+        <input name="rad" type="range" min="5" max="20" value="10" class="slider" id="radiusSlider"><br><br>
+        <label for="intensity">Intensidad</label><br>
+        <input name="intensity" type="range" min="10" max="100" value="50" class="slider" id="intensitySlider">
       </div>
 
 
@@ -336,7 +362,7 @@
            <rect id="rect2501" x="-4.0967" y="139.55" width="5.4024" height="4.7003"/>
           </g>
          </g>
-         <rect id="setup-muestra" x="106.96" y="114.36" width="12.21" height=".14374" fill="#b7b7b7" opacity=".206" stroke="#000" stroke-linecap="round" stroke-width=".0057602"/>
+         <rect id="setup-muestra" x="106.96" y="114.36" width="12.21" height=".4" fill="#b7b7b7" opacity=".206" stroke="#000" stroke-linecap="round" stroke-width=".0057602"/>
          <g id="setup-lightsource" transform="translate(114.47 -19.907)">
           <path id="path1650" d="m0.52571 131.25a1.9073 0.31788 0 0 1-0.95364 0.27529 1.9073 0.31788 0 0 1-1.9073 0 1.9073 0.31788 0 0 1-0.95364-0.27529" fill="#f4dcba" opacity=".821"/>
           <rect id="rect1646" x="-3.5008" y="122.96" width="4.2384" height="8.2648" fill="url(#linearGradient1660)"/>
@@ -478,7 +504,7 @@
         </g>
     </svg></div>
        
-    <div id="setup-tooltip"></div>
+    <div id="setup-tooltip" class="tooltip"></div>
 
     </div>
 
@@ -486,6 +512,27 @@
     <div class="slide" >
       <div class="short-title">Movimiento Browniano</div>
       <div class="title">Estudio del movimiento browniano</div>
+
+
+      <img src="images/Einstein.png" alt="Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 30%; transform: translateX(-50%); top: 150px;">
+
+      <div id="ecEinstein" style="text-align: left; transform: translateY(-50%); position: absolute; left: 60vw; top: 50%; padding: 5px; font-size: large;">
+        <div style="transform: scale(1.5);">
+          $$ D = \frac{R T}{N_A}\frac{1}{6\pi\eta r} $$
+        </div>
+        <br>
+        <p>
+          D: coeficiente de difusión<br>
+          R: constante de los gases<br>
+          T: temperatura<br>
+          \(N_A\): número de Avogadro<br>
+          \(\eta\): coeficiente de viscosidad del medio <br>
+          r: radio de la partícula
+        </p>
+      </div>
+      
+
+
     </div>
 
     <!-- Trayectorias -->
