@@ -25,7 +25,7 @@ body{
   /* border: solid red 1px; */
 }
 
-#description{
+#description-container{
   /* display: none; */
   background-color: white;
   height: calc(var(--presentation-height) - var(--height-video) - 20px) ;
@@ -34,11 +34,21 @@ body{
   right: 20px;
   top: calc(30px + var(--presentation-height));
   transform: translateY(-100%);
-  /* top: 40%; */
-  /* transform: translateY(-50%); */
-  /* box-shadow: 2px 2px 6px 0 #8b8b8b; */
-  /* border: solid red; */
   box-shadow: 2px 2px 6px 0 #8b8b8b;
+}
+
+#description{
+  padding: 20px;
+  font-size: medium;
+}
+
+a{
+  text-decoration: none;
+}
+
+#description .reference{
+  position: absolute;
+  bottom: 20px;
 }
 
 #presentation{
