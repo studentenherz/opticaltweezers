@@ -53,12 +53,12 @@ const toggleShow = (curr, elmClass) => {
 };
 
 nextBtn.addEventListener('click', () => {
-  index = (index + 1) % slides.length;
+  index = (index + slides.length + 1) % slides.length;
   setActiveSlide(index);
 });
 
 prevBtn.addEventListener('click', () => {
-  index = (index - 1) % slides.length;
+  index = (index + slides.length - 1) % slides.length;
   setActiveSlide(index); 
 });
 

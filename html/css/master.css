@@ -1,5 +1,5 @@
 *{
-  --color-1: #327cbdd3;
+  --color-1: #111;
 }
 
 svg > g:last-child > g:last-child { pointer-events: none }
@@ -81,7 +81,7 @@ main{
 .slidesNav span.active{
   opacity: 1;
   transform: scale(1);
-  background-color: #000000a2;
+  background-color: var(--color-1);
 }
 
 .slidesNav span .tooltip{
@@ -227,7 +227,7 @@ div.google-visualization-tooltip p{
   width: 100%;
   font-size: medium;
   height: 40px;
-  --handle-color:  #636363;
+  --handle-color:  #111;
 }
 
 .slider {
