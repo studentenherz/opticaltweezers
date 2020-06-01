@@ -321,3 +321,27 @@ img:hover{
   left: 25px;
   bottom: 13vh;
 }
+
+#chart1{
+  --size: 50vw;
+  width: var(--size); 
+  height: var(--size);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#michaelPaper{
+  width: 50vw; 
+  box-shadow: 2px 2px 6px 0 #8b8b8b; 
+  position: absolute; 
+  left: 20px; 
+  top: 240px; 
+  transform: translateY(350px);
+  transition: all 0.5s;
+}
+
+#michaelPaper.show{
+  transform: translateY(0);
+}

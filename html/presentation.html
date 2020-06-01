@@ -512,11 +512,11 @@
     <div class="slide" >
       <div class="short-title">Movimiento Browniano</div>
       <div class="title">Estudio del movimiento browniano</div>
-
+      <div class="description"> <a href="https://doi.org/10.1002/andp.19053220806">[3]</a> &nbsp; Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen </div>
 
       <img src="images/Einstein.png" alt="Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen" style="width: 50vw; box-shadow: 2px 2px 6px 0 #8b8b8b; position: absolute; left: 30%; transform: translateX(-50%); top: 150px;">
 
-      <div id="ecEinstein" style="text-align: left; transform: translateY(-50%); position: absolute; left: 60vw; top: 50%; padding: 5px; font-size: large;">
+      <div id="ecEinstein" style="width: 30vw; transform: translateY(-50%); position: absolute; right: 60px; top: 50%; padding: 5px; font-size: large;">
         <div style="transform: scale(1.5);">
           $$ D = \frac{R T}{N_A}\frac{1}{6\pi\eta r} $$
         </div>
@@ -526,7 +526,7 @@
           R: constante de los gases<br>
           T: temperatura<br>
           \(N_A\): número de Avogadro<br>
-          \(\eta\): coeficiente de viscosidad del medio <br>
+          \(\eta\): coeficiente de viscosidad dinámica del medio <br>
           r: radio de la partícula
         </p>
       </div>
@@ -538,9 +538,43 @@
     <!-- Trayectorias -->
     <div class="slide" >
       <div class="title">Análisis de las trayectorias</div>
-      <div class="description">Aquí ven las trayectoriasí</div>
       <div class="short-title">Trayectorias</div>
-      <div id="chart1" style="width: 420px; height: 420px;"></div>
+
+      <div class="description"> <a href="https://dx.doi.org/10.1016%2FS0006-3495(97)78820-9">[4]</a> &nbsp; Single-particle tracking: the distribution of diffusion coefficients. </div>
+      
+      <div id="chart1" ></div>
+
+      <div style="font-size: large; width: 40vw; position: absolute; right: 60px; top:50%; transform: translateY(-50%);">
+        <div style="transform: scale(1.5);">
+          $$\langle x^2 \rangle = 4Dt$$
+        </div>
+        <br>
+        <p>
+          \(\langle x^2 \rangle\): desplazamiento cuadrático medio <br>
+          t: tiempo
+        </p>
+        <div id="msdEq" style="transform: scale(1.5);">
+          $$\langle x^2 \rangle = 4Dt$$
+        </div>
+      </div>
+
+
+      <img id="michaelPaper" src="images/Michael.png" alt="Single-particle tracking: the distribution of diffusion coefficients.">
+
+      <script>
+        var michaelPaper = document.querySelector('#michaelPaper');
+        var msdEq = document.querySelector('#msdEq');
+        
+        msdEq.addEventListener('mouseover', function(){
+          michaelPaper.classList.add('show')
+        });
+        
+        msdEq.addEventListener('mouseleave', function(){
+          michaelPaper.classList.remove('show')
+        });
+
+      </script>
+
     </div>
 
     <!-- MSD -->
