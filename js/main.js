@@ -17,7 +17,15 @@ function onYouTubeIframeAPIReady() {
 }
 
 const timeMarks = {
-  312 : 1
+  13 : 1,
+  41 : 2,
+  123: 3,
+  238: 4,
+  253: 5,
+  309: 6,
+  376: 7,
+  403: 8,
+  458: 0
 }
 
 function scrollIntoViewWithVideo () {
