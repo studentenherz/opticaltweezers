@@ -1,17 +1,17 @@
-*{
+* {
   --color-1: #bbdfff;
-  --presentation-height: 80vh; 
+  --presentation-height: 80vh;
   --width-video: 36vw;
-  --height-video: calc(var(--width-video)*360/640);
+  --height-video: calc(var(--width-video) * 360 / 640);
 }
 
-body{
+body {
   margin: 0;
   font-size: 14px;
   background-color: whitesmoke;
 }
 
-#player{
+#player {
   /* display: none; */
   --width-video: 36vw;
   height: var(--height-video);
@@ -25,10 +25,10 @@ body{
   /* border: solid red 1px; */
 }
 
-#description-container{
+#description-container {
   /* display: none; */
   background-color: white;
-  height: calc(var(--presentation-height) - var(--height-video) - 20px) ;
+  height: calc(var(--presentation-height) - var(--height-video) - 20px);
   width: var(--width-video);
   position: absolute;
   right: 20px;
@@ -37,21 +37,21 @@ body{
   box-shadow: 2px 2px 6px 0 #8b8b8b;
 }
 
-#description{
+#description {
   padding: 20px;
   font-size: medium;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-#description .reference{
+#description .reference {
   position: absolute;
   bottom: 20px;
 }
 
-#presentation{
+#presentation {
   height: var(--presentation-height);
   width: 60vw;
   position: absolute;
@@ -67,7 +67,7 @@ a{
   box-shadow: 2px 2px 6px 0 #8b8b8b;
 }
 
-#footer{
+#footer {
   text-align: center;
   position: fixed;
   bottom: 10px;
@@ -80,27 +80,27 @@ a{
   /* box-shadow: 0 0px 12px 0 #8b8b8b; */
 }
 
-.footer-block{
+.footer-block {
   margin: 20px;
   float: left;
   font-weight: medium;
 }
 
-.footer-block.separator{
+.footer-block.separator {
   height: 50px;
   width: 2px;
   margin-top: 10px;
   background-color: #f5f5f5;
 }
 
-#lovePato{
+#lovePato {
   font-size: medium;
   float: right;
   padding: 0 20px;
 }
 
-#footer a{
-  color: #f5f5f5; 
+#footer a {
+  color: #f5f5f5;
   padding: 7px;
   border-radius: 5px;
   text-decoration: none;
@@ -108,7 +108,7 @@ a{
   transition: all 0.5s;
 }
 
-#footer a:hover{
+#footer a:hover {
   background-color: #f5f5f5;
   color: #111;
   /* font-weight: bold; */
